@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>背景色を変更</title>
+<style>
+/**
+ * キーフレーム
+ * アニメーションの内容を記述する。
+ */
+@keyframes change_bg_color {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: yellow;
+  }
+}
+/**
+ * アニメーションする要素のスタイル
+ */
+.target {
+  animation-duration: 2s; /* アニメーションする時間 */
+  animation-iteration-count: infinite; /* アニメーションを繰り返す回数 */
+  animation-name: change_bg_color; /* キーフレーム名を指定する */
+  padding: 1em;
+}
+</style>
+</head>
+<body>
+<h1>背景色を変更</h1>
+<div class="target">アニメーションする要素</div>
+</body>
+</html>

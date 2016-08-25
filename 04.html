@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>波打ちながら水平に移動する</title>
+<style>
+@keyframes move_horizontally {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  20% {
+    top: 100px;
+  }
+  40% {
+    top: 0;
+  }
+  60% {
+    top: 100px;
+  }
+  80% {
+    top: 0;
+  }
+  100% {
+    left: calc(100% - 100px);
+    top: 100px;
+  }
+}
+.target-wrapper {
+  position: relative;
+  background-color: lightgray;
+  width: 100%;
+  height: 200px;
+}
+.target {
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: move_horizontally;
+
+  background-color: red;
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  padding: 1em;
+  position: absolute;
+  width: 100px;
+}
+</style>
+</head>
+<body>
+<h1>波打ちながら水平に移動する</h1>
+<div class="target-wrapper">
+  <div class="target">アニメーションする要素</div>
+</div>
+</body>
+</html>
